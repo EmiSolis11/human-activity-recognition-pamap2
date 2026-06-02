@@ -49,8 +49,47 @@ PAMAP2 Physical Activity Monitoring Dataset
 
 ## Project Pipeline
 
-![Pipeline](images/pipeline.png)
-
+┌─────────────────┐
+│ PAMAP2 Dataset  │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ Data Cleaning   │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ Interpolation   │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ EDA             │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ Feature Eng.    │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ SelectKBest     │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ LOSO Validation │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ Random Forest   │
+│ Perceptron      │
+│ Logistic Reg.   │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ Ensemble Models │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│ Final Results   │
+└─────────────────┘
 ---
 
 ## Feature Engineering
