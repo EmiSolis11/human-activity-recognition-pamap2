@@ -141,10 +141,8 @@ Accuracy:
 .
 ├── README.md
 ├── requirements.txt
-├── notebooks
-│   └── Human_Activity_Recognition_PAMAP2.ipynb
-├── report
-│   └── Human_Activity_Recognition_PAMAP.pdf
+├── Human_Activity_Recognition_PAMAP2.ipynb
+├── Human_Activity_Recognition_PAMAP.pdf
 
 ```
 
