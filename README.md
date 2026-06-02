@@ -47,51 +47,6 @@ PAMAP2 Physical Activity Monitoring Dataset
 
 ---
 
-## Project Pipeline
-
-┌─────────────────┐
-│ PAMAP2 Dataset  │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ Data Cleaning   │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ Interpolation   │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ EDA             │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ Feature Eng.    │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ SelectKBest     │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ LOSO Validation │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ Random Forest   │
-│ Perceptron      │
-│ Logistic Reg.   │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ Ensemble Models │
-└────────┬────────┘
-         ↓
-┌─────────────────┐
-│ Final Results   │
-└─────────────────┘
----
-
 ## Feature Engineering
 
 Sensor signals were segmented into fixed windows and transformed into statistical descriptors.
