@@ -162,8 +162,9 @@ Accuracy:
 ## Author
 
 Emiliano Solís Ek
+
 Marco Magaña Mis
 
-Computer Engineering Student
+Computer Science Student
 
 Universidad Autónoma de Yucatán
