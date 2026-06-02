@@ -1,23 +1,29 @@
 # Human Activity Recognition using PAMAP2
 
-Human Activity Recognition (HAR) system developed in Python using wearable sensor data from the PAMAP2 dataset.
+Machine Learning pipeline for Human Activity Recognition (HAR) using wearable sensor data from the PAMAP2 dataset.
 
-The project implements a complete Machine Learning pipeline including:
+## Overview
 
-- Data cleaning and preprocessing
-- Sensor data fusion
-- Missing value handling
-- Feature extraction from time windows
-- Feature selection and dimensionality reduction
-- Leave-One-Subject-Out (LOSO) validation
-- Multiple classification models
-- Ensemble learning techniques
+This project develops and evaluates multiple machine learning models capable of recognizing human physical activities from wearable sensor data.
 
-## Project Overview
+The pipeline includes:
 
-The goal of this project is to automatically recognize physical activities performed by a person using data collected from wearable sensors.
+- Data Cleaning
+- Missing Value Handling
+- Exploratory Data Analysis
+- Feature Engineering
+- Feature Selection
+- Dimensionality Reduction
+- Leave-One-Subject-Out Validation
+- Ensemble Learning
 
-Activities include:
+---
+
+## Dataset
+
+PAMAP2 Physical Activity Monitoring Dataset
+
+### Activities
 
 - Lying
 - Sitting
@@ -32,7 +38,80 @@ Activities include:
 - Ironing
 - Rope Jumping
 
-The system uses inertial and cardiovascular sensor data from the PAMAP2 Physical Activity Monitoring dataset.
+### Sensors
+
+- Wrist IMU
+- Chest IMU
+- Ankle IMU
+- Heart Rate Monitor
+
+---
+
+## Project Pipeline
+
+![Pipeline](images/pipeline.png)
+
+---
+
+## Feature Engineering
+
+Sensor signals were segmented into fixed windows and transformed into statistical descriptors.
+
+Extracted features include:
+
+- Mean
+- Standard Deviation
+- Maximum Value
+- Signal Magnitude
+- Axis Correlations
+- Area Under Curve (AUC)
+- Magnitude Variation
+
+Final dataset:
+
+- 208 engineered features
+
+---
+
+## Validation Strategy
+
+Leave-One-Subject-Out (LOSO)
+
+This validation strategy evaluates model generalization on unseen subjects and provides a realistic estimate of real-world performance.
+
+---
+
+## Models Evaluated
+
+- Logistic Regression
+- Perceptron
+- Random Forest
+- Random Forest + Feature Selection
+- PCA + Classifiers
+- Kernel PCA + Classifiers
+- AdaBoost
+- Soft Voting
+- Bagging Random Forest
+
+---
+
+## Results
+
+| Model | Accuracy |
+|---------|---------|
+| Logistic Regression + Feature Selection | 84.49% |
+| Perceptron + Feature Selection | 85.31% |
+| Random Forest | 89.34% |
+| Random Forest + Feature Selection | 89.43% |
+| Bagging Random Forest | 90.19% |
+
+Best model:
+
+**Bagging Random Forest**
+
+Accuracy:
+
+**90.19%**
 
 ---
 
@@ -48,158 +127,43 @@ The system uses inertial and cardiovascular sensor data from the PAMAP2 Physical
 
 ---
 
-## Dataset
+## Skills Demonstrated
 
-Dataset used:
-
-PAMAP2 Physical Activity Monitoring Dataset
-
-Sensors:
-
-- Wrist IMU
-- Chest IMU
-- Ankle IMU
-- Heart Rate Monitor
-
-Original dataset size:
-
-- 2.8+ million samples
-- 54 sensor attributes
-- 9 subjects
-
----
-
-## Data Processing Pipeline
-
-### 1. Data Cleaning
-
-- Subject identification
-- Removal of transition activities
-- Quaternion removal
-- Missing value interpolation
-- Heart rate validation
-
-### 2. Exploratory Data Analysis
-
-- Histograms
-- KDE distributions
-- Correlation matrices
-- Scatter matrices
-- Class distribution analysis
-
-### 3. Feature Engineering
-
-Window segmentation:
-
-- 3-second windows
-- 300 samples per window
-- 90% purity filter
-
-Extracted features:
-
-- Mean
-- Standard deviation
-- Maximum value
-- Correlation between axes
-- Signal magnitude
-- AUC
-- Magnitude variation
-
-Final feature dataset:
-
-- 6,396 activity windows
-- 208 engineered features
-
----
-
-## Machine Learning Models
-
-Models evaluated:
-
-- Logistic Regression
-- Perceptron
-- Random Forest
-
-Dimensionality Reduction:
-
-- PCA
-- Kernel PCA
-- SelectKBest Feature Selection
-
-Validation Strategy:
-
-- Leave-One-Subject-Out (LOSO)
-
----
-
-## Results
-
-| Model | Accuracy |
-|---------|---------|
-| Logistic Regression + Feature Selection | 84.49% |
-| Perceptron + Feature Selection | 85.31% |
-| Random Forest | 89.34% |
-| Random Forest + Feature Selection | **89.43%** |
-
-Best model:
-
-**Random Forest + Feature Selection**
-
-Accuracy:
-
-**89.43% ± 4.66%**
-
----
-
-## Ensemble Learning
-
-Methods evaluated:
-
-- Bagging (Random Forest)
-- Soft Voting
-- AdaBoost
-
-Best ensemble:
-
-**Bagging Random Forest**
-
-Accuracy:
-
-**90.19%**
-
-F1-score:
-
-**0.9061**
-
----
-
-## Key Findings
-
-- LOSO validation provides realistic generalization to unseen subjects.
-- Feature Selection improved model stability.
-- PCA reduced performance significantly.
-- Random Forest consistently outperformed linear models.
-- Ensemble methods provided marginal gains over the best standalone classifier.
+- Data Cleaning
+- Exploratory Data Analysis
+- Feature Engineering
+- Machine Learning
+- Ensemble Learning
+- Feature Selection
+- Dimensionality Reduction
+- Cross Validation
+- Statistical Analysis
 
 ---
 
 ## Repository Structure
 
 ```text
-project/
-│
-├── data/
-├── notebooks/
-├── src/
-│   ├── preprocessing.py
-│   ├── feature_extraction.py
-│   ├── models.py
-│   └── evaluation.py
-│
-├── results/
-│   ├── figures/
-│   ├── confusion_matrix/
-│   └── reports/
-│
+.
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+├── notebooks
+│   └── Human_Activity_Recognition_PAMAP2.ipynb
+├── report
+│   └── PAMAP2_eg15.pdf
+└── images
+    ├── pipeline.png
+    ├── model_comparison.png
+    └── confusion_matrix.png
+```
+
+---
+
+## Author
+
+Emiliano Solís Ek
+Marco Magaña Mis
+
+Computer Engineering Student
+
+Universidad Autónoma de Yucatán
