@@ -145,10 +145,7 @@ Accuracy:
 │   └── Human_Activity_Recognition_PAMAP2.ipynb
 ├── report
 │   └── Human_Activity_Recognition_PAMAP.pdf
-└── images
-    ├── pipeline.png
-    ├── model_comparison.png
-    └── confusion_matrix.png
+
 ```
 
 ---
