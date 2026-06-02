@@ -46,6 +46,24 @@ PAMAP2 Physical Activity Monitoring Dataset
 - Heart Rate Monitor
 
 ---
+...
+## Project Pipeline
+
+![Pipeline](pipeline_PAMAP.png)
+
+## Model Comparison
+
+![Model Comparison](model_comparison.png)
+
+## Confusion Matrix
+
+![Confusion Matrix](confusion_matrix.png)
+
+## Correlation Analysis
+
+![Correlation Analysis](correlation_analysis.png)
+
+...
 
 ## Feature Engineering
 
