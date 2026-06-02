@@ -159,10 +159,15 @@ Accuracy:
 .
 ├── README.md
 ├── requirements.txt
-├── Human_Activity_Recognition_PAMAP2.ipynb
-├── Human_Activity_Recognition_PAMAP.pdf
+├── notebooks
+│   └── Human_Activity_Recognition_PAMAP2.ipynb
+├── report
+│   └── Human_Activity_Recognition_PAMAP.pdf
+└── images
+    ├── pipeline.png
+    ├── model_comparison.png
+    └── confusion_matrix.png
 
-```
 
 ---
 
