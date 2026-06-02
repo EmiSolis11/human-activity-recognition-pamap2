@@ -19,6 +19,13 @@ The pipeline includes:
 
 ---
 
+## Key Results
+
+- Best Model: Bagging Random Forest
+- Validation Strategy: Leave-One-Subject-Out (LOSO)
+- Accuracy: 90.19%
+- Dataset: PAMAP2 Physical Activity Monitorin
+  
 ## Dataset
 
 PAMAP2 Physical Activity Monitoring Dataset
