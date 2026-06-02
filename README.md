@@ -150,7 +150,7 @@ Accuracy:
 ├── notebooks
 │   └── Human_Activity_Recognition_PAMAP2.ipynb
 ├── report
-│   └── PAMAP2_eg15.pdf
+│   └── Human_Activity_Recognition_PAMAP.pdf
 └── images
     ├── pipeline.png
     ├── model_comparison.png
